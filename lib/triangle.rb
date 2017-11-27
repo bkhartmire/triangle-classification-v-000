@@ -11,7 +11,7 @@ class Triangle
     sides.sort!
     if sides.any? {|side| side <= 0} || sides[0] + sides[1] < sides[2]
       raise TriangleError
-    elsif sides.all? {|side| side == sides[0]} 
+    elsif sides.all? {|side| side == sides[0]}
       :equilateral
     elsif sides[1] == sides[2]
       :isosceles
