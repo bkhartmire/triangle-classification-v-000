@@ -9,7 +9,7 @@ class Triangle
   def kind
     sides = [self.side_one, self.side_two, self.side_three]
     sides.sort!
-    if sides.any? {|side| side <= 0} || sides[0] + sides[1] < sides[2]
+    if sides.any? {|side| side <= 0} || sides[0] + sides[1] <= sides[2]
       raise TriangleError
     elsif sides.all? {|side| side == sides[0]}
       :equilateral
